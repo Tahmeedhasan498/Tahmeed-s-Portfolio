@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tahmeed | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3c72;
+      --accent: #ffd700;
+      --bg-light: linear-gradient(to right, #e0eafc, #cfdef3);
+      --bg-dark: #121212;
+      --text-light: #333;
+      --text-dark: #eee;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      line-height: 1.6;
+      transition: background 0.5s ease, color 0.5s ease;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: slideDown 1.2s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .project {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body.dark-mode .project {
+      background: #1e1e1e;
+      color: var(--text-dark);
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--primary);
+      color: white;
+      margin-top: 3rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      color: #333;
+    }
+
+    .toggle-btn {
+      margin-top: 1rem;
+      background: var(--accent);
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    form {
+      margin-top: 2rem;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    button[type="submit"] {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #16315c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>I'm Tahmeed 👨‍💻</h1>
+    <p>Tech Explorer | Music Lover | Creative Thinker</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, I'm Tahmeed. I build with heart and code with soul. Whether it's a song that heals or a website that speaks, I believe technology can be deeply human. This portfolio is my story—told through pixels, poetry, and passion.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="project">
+        <h3>🎧 MoodTune</h3>
+        <p>A web app that matches your emotional state with Hindi & Bengali songs. Built with JavaScript and love.</p>
+      </div>
+      <div class="project">
+        <h3>🛠️ WinFixer</h3>
+        <p>A troubleshooting tool for Windows 11 users. Simple UI, powerful backend logic.</p>
+      </div>
+      <div class="project">
+        <h3>📖 StoryVerse</h3>
+        <p>A storytelling platform where emotions meet code. Bengali tales, AI poetry, and more.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>📧 Email: tahmeedhasan73@gmail.com</p>
+      <p>🐙 GitHub: <a href="https://github.com/tahmeed" target="_blank">github.com/tahmeed</a></p>
+      <p>🎵 Favorite Song: <em>Tum Hi Ho</em> — Arijit Singh</p>
+
+      <h3>Connect with Me</h3>
+      <p>
+        📸 Instagram:  
+        <a href="https://www.instagram.com/_.tahmeed._.hasan._?igsh=MW1zdDdnOGw5cDk2OQ==" target="_blank">
+          @_.tahmeed._.hasan._
+        </a><br>
+
+        📘 Facebook:  
+        <a href="https://www.facebook.com/share/1D8pFoRPEg/" target="_blank">
+          facebook.com/share/1D8pFoRPEg
+        </a>
+      </p>
+
+      <h3>Send Me a Message</h3>
+      <form action="#" method="post">
+        <label for="name">👤 Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">📧 Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">💬 Your Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 💙 in Chattogram | © 2025 Tahmeed</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>

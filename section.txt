@@ -1,0 +1,13 @@
+<section id="moodtune">
+  <h2>MoodTune Live Preview</h2>
+  <p>Select your mood to hear a matching song:</p>
+  <select id="moodSelector" onchange="showSong()">
+    <option value="">-- Choose Mood --</option>
+    <option value="sad">Sad 😢</option>
+    <option value="romantic">Romantic 💖</option>
+    <option value="hopeful">Hopeful 🌈</option>
+    <option value="nostalgic">Nostalgic 🕰️</option>
+  </select>
+
+  <div id="songPreview" style="margin-top: 2rem;"></div>
+</section>
